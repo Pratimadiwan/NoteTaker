@@ -39,7 +39,7 @@ function createNote(content = '', bgColor = '#ffffff', textColor = '#000000') {
     note.innerHTML = `
         <div contenteditable="true" class="note-content mb-4" style="color: ${textColor};">${content}</div>
         <button class="shorten-btn px-2 py-1 bg-gray-200 rounded">Shorten</button>
-        <button class="delete-btn absolute top-2 right-2 text-gray-500 hover:text-red-500">&times;</button>
+        <button class="delete-btn absolute top-2 right-2 text-gray-500   hover:text-red-500">&times;</button>
     `;
 
     const noteContent = note.querySelector('.note-content');

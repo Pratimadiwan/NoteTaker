@@ -39,10 +39,8 @@
 }
 main{
     border:2px solid black;
-    padding: auto;
 }
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     overflow: hidden; /* Prevent body scrolling */
   }
@@ -66,9 +64,9 @@ body {
   #notes-container {
     padding: 20px;
     height: 700px; /* Adjust for the header */
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-y: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 4fr)); /* Responsive grid */
     gap: 20px;
     background-color: #f4f4f4;
     border: 2px solid brown;
@@ -100,7 +98,6 @@ body {
 #notes-container {
     max-height:100%;  /* Fixed height for container */
     overflow-y: auto;   /* Enable vertical scroll */
-    padding-right: 20px; /* To avoid scrollbar overlap */
 }
 
 /* Modal styling */
