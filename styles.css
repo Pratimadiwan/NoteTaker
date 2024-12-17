@@ -1,124 +1,75 @@
-.dark .bg-gray-100 {
-    background-color: #1a202c;
-}
-
-.dark .text-gray-900 {
-    color: #061117;
-}
-
-.dark .bg-white {
-    background-color: #ffffff;
-}
-
-.dark .border-gray-300 {
-    border-color: #4a5568;
-}
-
-.dark .hover\:bg-blue-600:hover {
-    background-color: #2b6cb0;
-}
-
-/* Light mode toggle button color */
-#theme-toggle {
-    background-color: rgb(247, 196, 67);
-}
-
-/* Dark mode toggle button color */
-.dark #theme-toggle {
-    background-color: navy;
-}
-
-/* Add fixed height and scroll to the note content (the area where the user types) */
-.note-content {
-    max-height: 150px;
-    overflow-y: auto;
-    padding: 10px;
-    border: 1px solid #e2e8f0;
-    border-radius: 5px;
-    background-color: transparent;
-}
-main{
-    border:2px solid black;
-}
+/* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    overflow: hidden; /* Prevent body scrolling */
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f8f9fa;
+}
 
-  /* Fixed header */
-  #header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f8f9fa;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px;
-    z-index: 1000; /* Keep header above other elements */
-    display: flex;
-    justify-content: space-between; /* Align global tools and buttons */
-    align-items: center;
-  }
+/* Header styling */
+header {
+  background-color: #f4f4f4;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-  /* Notes container */
-  #notes-container {
-    padding: 20px;
-    height: 700px; /* Adjust for the header */
-    overflow-y: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 4fr)); /* Responsive grid */
-    gap: 20px;
-    background-color: #f4f4f4;
-    border: 2px solid brown;
-  }
-  #action-buttons button {
-    font-size: 14px;
-    cursor: pointer;
-  }
-  /* Individual cards */
-  .note {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+header h1 {
+  margin: 0;
+}
 
-  /* Selected card styling */
-  .note.selected {
-    border: 2px solid #007bff;
-  }
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  /* Notes container with scrollable behavior */
+/* Notes container */
 #notes-container {
-    max-height:100%;  /* Fixed height for container */
-    overflow-y: auto;   /* Enable vertical scroll */
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  overflow-y: auto;
 }
 
-/* Modal styling */
-#modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+/* Individual note */
+.note {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-textarea {
-    border-radius: 8px;
+/* Selected note */
+.note.selected {
+  border: 2px solid #007bff;
 }
 
-/* Add more custom styles as required */
-.selected {
-  border: 2px solid blue;
-  box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+/* Note content */
+.note-content {
+  max-height: 150px;
+  overflow-y: auto;
+  outline: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Buttons styling */
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Text Input for search */
+#search-bar {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
