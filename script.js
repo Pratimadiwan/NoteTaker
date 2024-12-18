@@ -3,7 +3,6 @@ const addNoteBtn = document.getElementById('add-note-btn');
 const deleteAllBtn = document.getElementById('delete-all-btn');
 const notesContainer = document.getElementById('notes-container');
 const searchBar = document.getElementById('search-bar');
-const themeIcon = document.getElementById('theme-icon');
 const globalBgColor = document.getElementById('global-bg-color');
 const globalTextColor = document.getElementById('global-text-color');
 const globalBoldBtn = document.getElementById('global-bold-btn');
@@ -34,15 +33,15 @@ function initializeApp() {
 
 
 // Create a new note
-function createNote(content = '', bgColor = '#ffffff', textColor = '#000000') {
+function createNote(content = '', bgColor = 'white', textColor = 'white') {
     const note = document.createElement('div');
-    note.classList.add('note', 'p-4', 'rounded', 'shadow-lg', 'relative', 'border', 'border-gray-300');
-    note.style.backgroundColor = bgColor;
+    note.classList.add('note');
+    // note.style.backgroundColor = bgColor;
 
     note.innerHTML = `
-        <div contenteditable="true" class="note-content mb-4" style="color: ${textColor};">${content}</div>
-        <button class="summarize-btn px-2 py-1 bg-blue-200 rounded">Summarize</button>
-        <button class="delete-btn absolute top-2 right-2 text-gray-500 hover:text-red-500">&times;</button>
+        <div contenteditable="true" class="note-content"></div>
+        <button class="summarize-btn">Summarize</button>
+        <button class="delete-btn">&times;</button>
     `;
 
     const noteContent = note.querySelector('.note-content');

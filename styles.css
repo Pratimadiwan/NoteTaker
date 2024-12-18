@@ -1,56 +1,62 @@
-/* General body styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #f8f9fa;
+  background: #C36B6B;
+  background: linear-gradient(135deg, #C36B6B, #3078A5);
+  background-attachment: fixed;
 }
 
 /* Header styling */
 header {
-  background-color: #f4f4f4;
+  background: rgb(43, 41, 56);
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-header h1 {
-  margin: 0;
+h1{
+  font-size: 40px;
+  background: rgb(250,171,60);
+background: linear-gradient(0deg, rgba(250,171,60,1) 0%, rgba(247,247,237,0.6306897759103641) 47%, rgba(242,206,19,1) 96%, rgba(110,219,210,0.42620798319327735) 100%, rgba(110,219,199,0.42620798319327735) 123%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
 /* Notes container */
 #notes-container {
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  overflow-y: auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 /* Individual note */
 .note {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  color: white;
   border-radius: 5px;
   padding: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(236, 227, 227, 0.1);
   position: relative;
+  background: rgb(43, 41, 56);
+  box-shadow: 0 0 10px 0 rgba(17, 14, 14, 0.1);
 }
 
-/* Selected note */
-.note.selected {
-  border: 2px solid #007bff;
+::-webkit-scrollbar {
+  display: none;
 }
 
 /* Note content */
 .note-content {
-  max-height: 150px;
+  height: 150px;
   overflow-y: auto;
   outline: none;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #f8f3f3;
+  border-radius: 15px;
+  margin-bottom: 10px;
 }
 
 /* Buttons styling */
@@ -58,16 +64,12 @@ button {
   padding: 5px 10px;
   cursor: pointer;
   border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 3px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(163deg, rgba(2, 0, 36, 1) 0%, rgba(150, 101, 190, 1) 49%, rgba(0, 212, 255, 1) 100%);
+  color:white;
+  border-radius: 5px;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
-
-/* Text Input for search */
 #search-bar {
   padding: 5px;
   border: 1px solid #ccc;
